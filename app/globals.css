@@ -31,6 +31,28 @@
 }
 
 :root {
+  color-scheme: light;
+  --background: oklch(0.985 0.006 240);
+  --foreground: oklch(0.22 0.025 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.025 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.025 250);
+  --primary: oklch(0.58 0.19 255);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.012 240);
+  --secondary-foreground: oklch(0.25 0.025 250);
+  --muted: oklch(0.965 0.012 240);
+  --muted-foreground: oklch(0.54 0.025 240);
+  --accent: oklch(0.95 0.025 240);
+  --accent-foreground: oklch(0.22 0.025 250);
+  --destructive: oklch(0.62 0.21 25);
+  --border: oklch(0.35 0.035 245 / 16%);
+  --input: oklch(0.35 0.035 245 / 18%);
+  --ring: oklch(0.58 0.19 255);
+}
+
+html.dark {
   color-scheme: dark;
   --background: oklch(0.13 0.015 250);
   --foreground: oklch(0.94 0.012 240);
@@ -38,7 +60,7 @@
   --card-foreground: oklch(0.94 0.012 240);
   --popover: oklch(0.16 0.018 250);
   --popover-foreground: oklch(0.94 0.012 240);
-  --primary: oklch(0.72 0.16 190);
+  --primary: oklch(0.72 0.16 220);
   --primary-foreground: oklch(0.13 0.015 250);
   --secondary: oklch(0.22 0.02 250);
   --secondary-foreground: oklch(0.94 0.012 240);
@@ -49,7 +71,7 @@
   --destructive: oklch(0.67 0.18 25);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.72 0.16 190);
+  --ring: oklch(0.72 0.16 220);
 }
 
 html:not(.dark) {
@@ -59,7 +81,7 @@ html:not(.dark) {
   --card-foreground: oklch(0.19 0.025 250);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.19 0.025 250);
-  --primary: oklch(0.56 0.16 190);
+  --primary: oklch(0.58 0.19 255);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.94 0.014 240);
   --secondary-foreground: oklch(0.25 0.025 250);
@@ -69,7 +91,7 @@ html:not(.dark) {
   --accent-foreground: oklch(0.2 0.025 250);
   --border: oklch(0.2 0.025 250 / 12%);
   --input: oklch(0.2 0.025 250 / 14%);
-  --ring: oklch(0.56 0.16 190);
+  --ring: oklch(0.58 0.19 255);
 }
 
 * { @apply border-border outline-ring/50; }
@@ -98,3 +120,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .prose th, .prose td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; }
 .prose th { background: var(--muted); text-align: left; }
 .tool-button { @apply inline-flex size-8 shrink-0 items-center justify-center rounded-md text-muted-foreground transition hover:bg-accent hover:text-foreground; }
+#markdown-editor { min-height: 100%; resize: none; background: var(--card); color: var(--foreground); font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.75; tab-size: 2; }
+#markdown-editor::selection { background: color-mix(in oklab, var(--primary) 22%, transparent); }
+.editor-panel, .preview-panel { background: var(--card); }
+.preview-panel { overflow-y: auto; }
+@media (min-width: 768px) {
+  .editor-panel, .preview-panel { min-width: 0; }
+}

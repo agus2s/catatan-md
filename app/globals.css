@@ -128,9 +128,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .prose th, .prose td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; }
 .prose th { background: var(--muted); text-align: left; }
 .tool-button { @apply inline-flex size-8 shrink-0 items-center justify-center rounded-md text-muted-foreground transition hover:bg-accent hover:text-foreground; }
-@media (max-width: 900px) {
-  .formatting-toolbar { display: none !important; }
-}
 #markdown-editor { min-height: 100%; resize: none; background: var(--card); color: var(--foreground); font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.75; tab-size: 2; }
 #markdown-editor::selection { background: color-mix(in oklab, var(--primary) 22%, transparent); }
 .editor-panel { background: var(--card); }

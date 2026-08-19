@@ -66,7 +66,7 @@ html.dark {
   --secondary-foreground: oklch(0.94 0.012 240);
   --muted: oklch(0.2 0.018 250);
   --muted-foreground: oklch(0.62 0.025 240);
-  --accent: oklch(0.22 0.035 215);
+  --accent: oklch(0.22 0.035 245);
   --accent-foreground: oklch(0.94 0.012 240);
   --destructive: oklch(0.67 0.18 25);
   --border: oklch(1 0 0 / 10%);
@@ -87,7 +87,7 @@ html:not(.dark) {
   --secondary-foreground: oklch(0.25 0.025 250);
   --muted: oklch(0.95 0.012 240);
   --muted-foreground: oklch(0.48 0.025 240);
-  --accent: oklch(0.93 0.025 215);
+  --accent: oklch(0.93 0.025 245);
   --accent-foreground: oklch(0.2 0.025 250);
   --border: oklch(0.2 0.025 250 / 12%);
   --input: oklch(0.2 0.025 250 / 14%);
@@ -109,7 +109,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .prose ol ol { list-style-type: lower-alpha; margin-block: 0.35rem; }
 .prose li { padding-inline-start: 0.35rem; }
 .prose li + li { margin-top: 0.35rem; }
-.prose li::marker { color: var(--primary); font-weight: 700; }
+.prose li::marker { color: var(--muted-foreground); font-weight: 600; }
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 { color: var(--foreground); font-family: var(--font-sans); font-weight: 700; line-height: 1.2; scroll-margin-top: 1.5rem; }
 .prose h1 { margin-top: 0; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; font-size: 2rem; letter-spacing: -0.035em; }
 .prose h2 { margin-top: 2.25rem; margin-bottom: 0.85rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; font-size: 1.5rem; }
@@ -130,8 +130,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tool-button { @apply inline-flex size-8 shrink-0 items-center justify-center rounded-md text-muted-foreground transition hover:bg-accent hover:text-foreground; }
 #markdown-editor { min-height: 100%; resize: none; background: var(--card); color: var(--foreground); font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.75; tab-size: 2; }
 #markdown-editor::selection { background: color-mix(in oklab, var(--primary) 22%, transparent); }
-.editor-panel, .preview-panel { background: var(--card); }
-.preview-panel { overflow-y: auto; }
+.editor-panel { background: var(--card); }
+.preview-panel { overflow-y: auto; background: var(--muted); }
+.preview-panel .prose { margin-block: 1.5rem; padding: 2rem; background: var(--card); border: 1px solid var(--border); }
 @media (min-width: 768px) {
   .editor-panel, .preview-panel { min-width: 0; }
 }

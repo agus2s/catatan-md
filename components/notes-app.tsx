@@ -29,7 +29,7 @@ export function NotesApp({ initialNotes, userName }: { initialNotes: Note[]; use
   const [folderOpen, setFolderOpen] = useState(true)
   const [theme, setTheme] = useState<'light' | 'dark'>('dark')
   const [menuOpen, setMenuOpen] = useState(false)
-  const [formatToolbarOpen, setFormatToolbarOpen] = useState(true)
+  const [formatToolbarOpen, setFormatToolbarOpen] = useState(false)
   const [isPending, startTransition] = useTransition()
 
   useEffect(() => {

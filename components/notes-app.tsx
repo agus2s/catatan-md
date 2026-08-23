@@ -7,8 +7,8 @@ import { createNote, deleteNote, updateNote } from '@/app/actions/notes'
 import { signOut } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 import {
-  Check, ChevronDown, ChevronRight, Download, FileCode2, FileText,
-  Folder, FolderPlus, LogOut, Menu, MoreHorizontal, Moon, Plus, Quote, Search, Sun, Trash2, X,
+  Bold, Check, ChevronDown, ChevronRight, Code2, Download, FileCode2, FileText,
+  Folder, FolderPlus, Heading2, Italic, LogOut, Menu, MoreHorizontal, Moon, Plus, Quote, Search, Sun, Trash2, X,
 } from 'lucide-react'
 
 type Note = { id: number; title: string; content: string; updatedAt: Date }

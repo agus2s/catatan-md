@@ -8,7 +8,7 @@ import { signOut } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 import {
   Bold, Check, ChevronDown, ChevronRight, Code2, Download, FileCode2, FileText,
-  Folder, FolderPlus, Heading2, Italic, Link2, List, ListOrdered, LogOut, Menu, MoreHorizontal, Moon, Plus, Search, Sun, Trash2, X,
+  Folder, FolderPlus, Heading2, Italic, Link2, List, ListOrdered, LogOut, Menu, MoreHorizontal, Moon, Plus, Quote, Search, Sun, Trash2, X,
 } from 'lucide-react'
 
 type Note = { id: number; title: string; content: string; updatedAt: Date }
